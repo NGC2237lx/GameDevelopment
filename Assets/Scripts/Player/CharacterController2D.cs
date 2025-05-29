@@ -49,7 +49,7 @@ public class CharacterController2D : MonoBehaviour
     [SerializeField] float slashIntervalTime = 0.2f;
 
     [Header("攻击数值参数")]
-    [SerializeField] int slashDamage;
+    [SerializeField] public int slashDamage;
 
     private int slashCount;
     private float lastSlashTime;
@@ -124,7 +124,8 @@ public class CharacterController2D : MonoBehaviour
         animator.SetBool(animatorFristLandingBool, firstLanding);
         if (firstLanding)
         {
-            FindObjectOfType<SoulOrb>().DelayShowOrb(0);
+            // print("First Landing" + );
+            //FindObjectOfType<SoulOrb>().DelayShowOrb(0);
         }
     }
 

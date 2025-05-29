@@ -9,7 +9,7 @@ public class Enemy : Breakable
     [Header("Coin Attr")]
     [SerializeField] protected GameObject coin;
     [SerializeField] protected int minSpawnCount = 1;
-    [SerializeField] protected int maxSpawnCount = 4;
+    [SerializeField] protected int maxSpawnCount = 3;
     [SerializeField] protected float maxBumpHorizontalForce = 400;
     [SerializeField] protected float minBumpVerticalForce = 600;
     [SerializeField] protected float maxBumpVerticalForce = 800;
@@ -66,7 +66,10 @@ public class Enemy : Breakable
         SpawnCoins();
         canMove = false;
     }
-
+    public bool IsDeadOrNot()
+    {
+        return isDead;
+    }
     public virtual void SpawnCoins()
     {
         int randomCount = Random.Range(minSpawnCount, maxSpawnCount + 1);

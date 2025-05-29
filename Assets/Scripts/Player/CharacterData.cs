@@ -7,6 +7,7 @@ public class CharacterData : MonoBehaviour
 {
     [SerializeField] private int health;
     [SerializeField] private bool isDead;
+    [SerializeField] private int maxHealth = 5; // 添加最大生命值
 
     private GameManager gameManager;
     private CharacterEffect effecter;
@@ -27,6 +28,17 @@ public class CharacterData : MonoBehaviour
         CheckLeakHealth();
     }
 
+    // 新增：城隍庙治疗触发方法
+    public void HealAtTemple()
+    {
+        if (!isDead && health < maxHealth)
+        {
+            health = maxHealth; // 完全恢复生命值
+            Debug.Log($"在城隍庙治疗，生命值恢复至: {health}");
+        }
+    }
+
+    // 以下保持原有函数不变
     private void CheckLeakHealth()
     {
         if (health == 1 && !isLeak)

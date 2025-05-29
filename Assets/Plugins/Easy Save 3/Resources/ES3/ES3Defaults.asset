@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   settings:
     _location: 0
-    path: HWSave.es3
+    path: SaveFile.es3
     encryptionType: 0
-    encryptionPassword: dreamcirno
+    encryptionPassword: password
     directory: 0
     format: 0
     bufferSize: 2048
@@ -29,10 +29,11 @@ MonoBehaviour:
     assemblyNames:
     - Assembly-CSharp-firstpass
     - Assembly-CSharp
+    - PPv2URPConverters
     showAdvancedSettings: 0
   addMgrToSceneAutomatically: 0
   autoUpdateReferences: 1
   useGlobalReferences: 1
   logDebugInfo: 0
-  logWarnings: 0
+  logWarnings: 1
   logErrors: 1
