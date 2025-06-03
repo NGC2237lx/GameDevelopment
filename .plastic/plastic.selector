@@ -1,4 +1,0 @@
-repository "Hollow-Knight-Imitation@tj_ngc2237ya@cloud.cn"
-  path "/"
-    br "/main"
-    co "/main"
